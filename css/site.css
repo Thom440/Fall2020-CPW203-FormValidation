@@ -17,6 +17,28 @@ form button {
     margin-left: 50%;
 }
 
+h1 {
+    text-align: center;
+}
+
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+button {
+    padding: .5em;
+    border-radius: .4em;
+    background-color: darkgreen;
+    color: wheat;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+}
+
 @media only screen and (max-width: 600px) {
     form label {
         text-align: left;
