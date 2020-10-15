@@ -11,12 +11,17 @@
     <form>
         <label for="first-name">First Name</label>
         <input type="text" id="first-name">
-        <span>*</span>
+        <span data-required data-default-error="First name is required">*</span>
         <br>
         <label for="last-name">Last Name</label>
         <input type="text" id="last-name">
-        <span>*</span>
+        <span data-required>*</span>
         <br>
+        <label for="dob">Date of Birth</label>
+        <input type="text">
+        <span></span>
+        <br>
+
         <button type="button">Register</button>
     </form>
     <script src="js/main.js"></script>
