@@ -9,10 +9,14 @@ function main():void {
     isTextPresent("last-name", "Last name is required");
 
     // Validate Date
+    validateDate();
+}
+
+function validateDate() {
     let dobBox = <HTMLInputElement>document.getElementById("dob");
     let dob = dobBox.value;
     if (!isValidDate(dob)) {
-        dobBox.nextElementSibling.innerHTML = "Invalid format. mm/dd/yyyy"
+        dobBox.nextElementSibling.innerHTML = "Invalid format. mm/dd/yyyy";
     }
 }
 
