@@ -4,19 +4,33 @@ window.onload = function() {
 }
 
 function main():void {
+    createH2Message();
+
     resetErrorMessages();
     isTextPresent("first-name", "First name is required");
     isTextPresent("last-name", "Last name is required");
 
-    // Validate Date
     validateDate();
+}
+
+function createH2Message() {
+    let msgHeading = document.createElement("h2");
+    msgHeading.innerText = "Processing Form";
+    msgHeading.setAttribute("class", "message");
+    let h1 = document.querySelector("h1");
+    h1.insertAdjacentElement("afterend", msgHeading);
+
+    setTimeout(function () {
+        msgHeading.remove();
+    }, 5000);
 }
 
 function validateDate() {
     let dobBox = <HTMLInputElement>document.getElementById("dob");
     let dob = dobBox.value;
     if (!isValidDate(dob)) {
-        dobBox.nextElementSibling.innerHTML = "Invalid format. mm/dd/yyyy";
+        let errSpan = document.getElementById("dob-span");
+        errSpan.innerHTML = "Invalid format. mm/dd/yyyy"
     }
 }
 
